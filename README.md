@@ -1,7 +1,6 @@
 # state-of-the-data
 
-The State of the Data tools are a set of python based geoprocessing tools that evaluate the quality of topographic feature data in terms of its completeness, 
-logical consistency, positional accuracy, source lineage, temporal accuracy, and thematic accuracy.
+The State of the Data tools are a set of python based geoprocessing tools that evaluate the quality of topographic feature data in terms of its comparative completeness, attribution richness (logical consistency), positional accuracy, source lineage, temporal accuracy (and source currency), and thematic accuracy (and feature scale/density).
 
 # Purpose
 The National Geospatial-Intelligence Agency (NGA) desires to maintain a full understanding of the adequacy of current data and product holdings. Areas where data and products meet or exceed requirements are distinguished from those where mission-relevant shortfalls exist. Analytic methodologies will be used to delineate those areas where mission-relevant data enrichment and production is required, whether due to pre-existing deficiencies, recent changes in world events, or changes in mission needs or priorities.
@@ -21,7 +20,7 @@ The National Geospatial-Intelligence Agency (NGA) desires to maintain a full und
 State of the Data for WebGIS is designed to work with features that have been service enabled as ArcGIS Feature Services. This set of tools uses the [ArcGIS API for Python](https://developers.arcgis.com/python/) to pull data that is served as feature services in a spatial dataframe, perform the state of the data analysis calculations, and output the data as a feature service.
 
 ## state-of-the-data-for-desktop
-State of the Data for Desktop is a set of ArcGIS Desktop Geoprocessing tools that can be used from ArcMap or ArcGIS Pro to process the State of the Data metrics for feature classes, feature layers, and shapefiles. There are two separate toolboxes. The **State of the Data.tbx** is intended for creating new State of the Data assessments. The **State of the Data Enterprise.tbx** is intened to work with data that can be updated withing an enterprise geodatabase.
+State of the Data for Desktop is a set of ArcGIS Desktop Geoprocessing tools that can be used from ArcMap or ArcGIS Pro to process the State of the Data metrics for feature classes, feature layers, and shapefiles. There are two separate toolboxes. The **State of the Data.tbx** is intended for creating new State of the Data assessments. The **State of the Data Enterprise.tbx** is intended to work with data that can be updated within an enterprise geodatabase.
 
 ### State of the Data Toolbox
 This toolbox contains all current State of the Data analysis scripts as ArcGIS geoprocessing tools.
@@ -34,10 +33,10 @@ This toolbox is a subset of the tools in the State of the Data toolbox that have
 - Identifies attribution deficiencies at the feature level for user defined attributes
 ### Attribution Assessment (TDS 6.1 Schema)
 - Identifies attribution deficiencies at the feature level based on mission or data requirements
-### Completeness
+### Comparative Completeness
 - Identifies areas which may have missing features
 - Line: total line length; Point: feature count; Surface: area
-### Logical Consistency
+### Logical Consistency (Attribution Richness)
 - Creates a statistical summary of the attribution assessment over user defined areas of interest
 ### Logical Consistency (TDS 6.1 Schema)
 - Creates a statistical summary of the attribution assessment of TDS 6.1 data over user defined areas of interest
@@ -60,20 +59,20 @@ This toolbox is a subset of the tools in the State of the Data toolbox that have
 - Statistically summarizes the source of features in the TDS 6.1 schema source given the values in the TDS source field
 ### Temporal Accuracy from Change Detection
 - Identifies features that may require updating due to currency and detected change
-### Temporal Currency
+### Temporal (Source) Currency
 - Statistically summarizes the source date of features in a feature class given a selected source date attribute field
 - Source date could be the last edit date, the feature creation date, the source data of the imagery from which the feature was derived from, etc.
 ### Temporal Currency (TDS 6.1 Schema)
 - Statistically summarizes the source date of features in the TDS 6.1 schema given the values in the TDS source date field
 ### Temporal Currency Comparison
-- Comapres two outputs from **Temporal** **Currency** and ranks cells in terms 
-### Thematic Accuracy (TDS 6.1 Schema)
+- Comapres two outputs from **Temporal Currency** and ranks cells in terms 
+### Thematic Accuracy (and scale/density) (TDS 6.1 Schema)
 - Identifies areas where feature collection requirements properly correlate to population
 ### Thematic Summary
 - Performs a statistical summary of a feature subtype or selected attribute
 
 # Installation and Use
-The State of the Data tools use Python and Esri's arcpy library. In order for the tools to run, ArcGIS Desktop verision 10.4+ or ArcGIS Pro 1.2+ must be installed. If that condition is met, you should be able to clone this repo and run the tools as ArcGIS geoprocessing tools through ArcMap  or ArcGIS Pro or as stand alone scripts.
+The State of the Data tools use Python and Esri's arcpy library. In order for the tools to run, ArcGIS Desktop verision 10.4+ or ArcGIS Pro 1.2+ must be installed. If that condition is met, you should be able to clone this repo and run the tools as ArcGIS geoprocessing tools through ArcMap or ArcGIS Pro or as stand alone scripts.
 
 # Points of Contact
 - Derek Silva (Derek.A.Silva@nga.mil)
